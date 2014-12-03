@@ -5,8 +5,7 @@
 include_recipe 'runit'
 
 runit_service "elasticsearch" do
-  supports :status => true, :restart => true
-  action [ :enable ]
+  action [ :nothing]
 end
 
 # Create ES config file
