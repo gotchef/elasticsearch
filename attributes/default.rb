@@ -8,8 +8,6 @@ Chef::Log.debug "Loaded settings: #{settings.inspect}"
 node.default[:elasticsearch] ||= {}
 node.normal[:elasticsearch]  ||= {}
 
-include_attribute 'elasticsearch::customize'
-
 node.normal[:elasticsearch]    = DeepMerge.merge(node.default[:elasticsearch].to_hash, node.normal[:elasticsearch].to_hash)
 node.normal[:elasticsearch]    = DeepMerge.merge(node.normal[:elasticsearch].to_hash, settings.to_hash)
 
