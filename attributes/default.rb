@@ -44,8 +44,10 @@ default.elasticsearch[:templates][:elasticsearch_env] = "elasticsearch-env.sh.er
 default.elasticsearch[:templates][:elasticsearch_yml] = "elasticsearch.yml.erb"
 default.elasticsearch[:templates][:logging_yml]       = "logging.yml.erb"
 
-
-
+# == HTTP
+#
+default.elasticsearch['http.cors.enabled']= true
+default.elasticsearch['http.cors.allow-origin'] = "http://localhost:4222"
 
 # === MEMORY
 #

@@ -64,6 +64,9 @@
 <%= print_value 'http.max_content_length' -%>
 <%= print_value 'http.enabled' -%>
 
+<%= print_value 'http.cors.enabled' -%>
+<%= print_value 'http.cors.allow-origin' -%>
+
 ################################### Gateway ###################################
 
 <%= print_value 'gateway.type', node.elasticsearch[:gateway][:type] -%>
