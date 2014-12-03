@@ -5,7 +5,7 @@
 es_home = "#{node.elasticsearch[:dir]}/elasticsearch"
 
 default[:elasticsearch][:env_vars] = {
-	"ES_HOME=" => "#{es_home}",
+	"ES_HOME" => "#{es_home}",
 	"ES_CLASSPATH" => "$ES_CLASSPATH:#{es_home}/lib/*:#{es_home}/lib/sigar/*",
 	"ES_HEAP_SIZE" => "#{node.elasticsearch[:allocated_memory]}",
 	"ES_JAVA_OPTS" => " -server -Djava.net.preferIPv4Stack=true 

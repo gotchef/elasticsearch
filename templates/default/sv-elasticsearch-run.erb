@@ -1,5 +1,5 @@
 #!/bin/sh
 exec 2>&1 
 
-exec chpst -u <%=node[:elasticsearch][:user] %> <%= node[:elasticsearch][:bindir] %>/elasticsearch
+exec chpst -e /etc/service/elasticsearch/env  <%= node[:elasticsearch][:bindir] %>/elasticsearch
 
